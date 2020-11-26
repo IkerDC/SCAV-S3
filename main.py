@@ -1,16 +1,26 @@
-# This is a sample Python script.
-
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import os
+import convert_codec as vc
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
+def switch(exercice):
+    if (exercice == "1"):
+        print("Filename:")
+        file = input()
+        print("Introduce format from \"vp8\",\"vp9\",\"h265\" or \"av1\"")
+        cod = input()
+        vc.codec(file, cod)
+        return True
+    elif (exercice == "2"):
+        print("4 videos should be especified. Introduce the 4 filename, pressing ENTER each time a file name is introduced.")
+        file1 = input()
+        file2 = input()
+        file3 = input()
+        file4 = input()
+        vc.visual(file1, file2, file3, file4)
+        os.system("ffplay codec_compaire.mp4")
+        return True
+    else:
+        return False
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+switch("3")
