@@ -1,6 +1,6 @@
 import os
 import convert_codec as vc
-import stream_video as str
+import stream_video as streaming
 
 
 def switch(exercice):
@@ -29,7 +29,7 @@ def switch(exercice):
         port = input()
         print("Stream "+ file+ " to " +IP+ ":" +port)
         print("To kill press [q]")
-        str.stream(file, IP, port)
+        streaming.stream(file, IP, port)
         return True
     else:
         return False
