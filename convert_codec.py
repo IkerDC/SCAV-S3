@@ -21,7 +21,7 @@ def visual(filename1, filename2, filename3, filename4):
     #this function will combine 4 videos of different format or the same
     cmd1 = "ffmpeg -ss 0 -i " +filename1+ " -ss 0 -i "+filename3+" -filter_complex vstack left.mp4"
     cmd2 = "ffmpeg -ss 0 -i " +filename2+ " -ss 0 -i " +filename4+ " -filter_complex vstack right.mp4"
-    cmd3 = "ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack -i audio.mp4 codec_compaire.mp4"
+    cmd3 = "ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack -i audio.mp4 codec_compare.mp4"
     os.system(cmd1)
     os.system(cmd2)
     os.system(cmd3)
